@@ -5,9 +5,9 @@
  * usando Arduino UNO
 */
 
-#define TEMPO_ON_VERMELHO 1000
-#define TEMPO_ON_AMARELO 1000
-#define TEMPO_ON_VERDE 1000
+#define TEMPO_ON_VERMELHO 1500
+#define TEMPO_ON_AMARELO 1500
+#define TEMPO_ON_VERDE 1500
 
 #define LED_VERMELHO 8// Definindo LED_VERMELHO como 8
 #define LED_AMARELO 9// Definindo LED_AMARELO como 9
