@@ -25,14 +25,14 @@
  * @parametro qtdeDeVezes: um inteiro que recebe a quantidade de vezes que o led vai piscar
  * @retval
  */
-void piscarLed(int pinoLed, int qtdeDeVezes)
+void piscarLed(int pinoLed, int qtdeDeVezes, int tempoOn, int tempoOff)
 {
   for(int i = 0; i < qtdeDeVezes; ++i)
   {
     digitalWrite(pinoLed, HIGH);
-    delay(1000);
+    delay(tempoOn);
     digitalWrite(pinoLed, LOW);
-    delay(1000);
+    delay(tempoOff);
   }
 }
 
@@ -46,7 +46,7 @@ void setup()
 
 void loop()
 {
-  piscarLed(LED_VERMELHO, 5);
-  piscarLed(LED_AMARELO, 3);
-  piscarLed(LED_VERDE, 10);
+  piscarLed(LED_VERMELHO, 5, TEMPO_ON_VERMELHO, TEMPO_OFF_VERMELHO);
+  piscarLed(LED_AMARELO, 3, TEMPO_ON_AMARELO, TEMPO_OFF_AMARELO);
+  piscarLed(LED_VERDE, 10, TEMPO_ON_VERDE, TEMPO_OFF_VERDE);
 }
