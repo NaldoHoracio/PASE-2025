@@ -18,12 +18,25 @@
 #define LED_VERDE 10// Definindo LED_VERDE como 10
 
 /**!
- * @apresentacao Função setup
+ * @apresentacao Esta função faz um LED piscar 
+ * um determinado número de vezes
  *
- *
- * @parametro 
+ * @parametro pinoLed: um inteiro que recebe o valor do pino do led
+ * @parametro qtdeDeVezes: um inteiro que recebe a quantidade de vezes que o led vai piscar
  * @retval
  */
+void piscarLed(int pinoLed, int qtdeDeVezes)
+{
+  for(int i = 0; i < qtdeDeVezes)
+  {
+    digitalWrite(pinoLed, HIGH);
+    delay(1000);
+    digitalWrite(pinoLed, LOW);
+    delay(1000);
+  }
+}
+
+
 void setup()
 {
   pinMode(LED_VERMELHO, OUTPUT);// Led vermelho
@@ -31,39 +44,9 @@ void setup()
   pinMode(LED_VERDE, OUTPUT);// Led verde  
 }
 
-
-/**!
- * @apresentacao Função loop
- *
- * Esta função executa as instruções que o 
- * arduino irá executar. Equivale a main do C++
- *
- * @parametro 
- * @retval
- */
 void loop()
 {
-  for(i = 0; i < 5; ++i)
-  {
-    digitalWrite(LED_VERMELHO, HIGH);
-    delay(TEMPO_ON_VERMELHO);
-    digitalWrite(LED_VERMELHO, LOW);
-    delay(TEMPO_OFF_VERMELHO);
-  }
-
-  for(i = 0; i < 3; ++i)
-  {
-    digitalWrite(LED_AMARELO, HIGH);
-    delay(TEMPO_ON_AMARELO);
-    digitalWrite(LED_AMARELO, LOW);
-    delay(TEMPO_OFF_AMARELO);
-  }
-
-  for(i = 0; i < 10; ++i)
-  {
-    digitalWrite(LED_VERDE, HIGH);
-    delay(TEMPO_ON_VERDE);
-    digitalWrite(LED_VERDE, LOW);
-    delay(TEMPO_OFF_VERDE);
-  }
+  piscarLed(LED_VERMELHO, 5);
+  piscarLed(LED_AMARELO, 3);
+  piscarLed(LED_VERDE, 10);
 }
