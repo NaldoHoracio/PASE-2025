@@ -39,7 +39,6 @@ void setup()
  */
 void loop()
 {
-  int i;
   for(i = 0; i < 5; ++i)
   {
     digitalWrite(LED_VERMELHO, HIGH);
