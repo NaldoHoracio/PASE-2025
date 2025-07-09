@@ -49,7 +49,7 @@ void loop()
     delay(1000);
   }
 
-  for(i = 0; i < 5; ++i)
+  for(i = 0; i < 3; ++i)
   {
     digitalWrite(LED_AMARELO, HIGH);
     delay(TEMPO_ON_AMARELO);
@@ -57,7 +57,7 @@ void loop()
     delay(1000);
   }
 
-  for(i = 0; i < 5; ++i)
+  for(i = 0; i < 10; ++i)
   {
     digitalWrite(LED_VERDE, HIGH);
     delay(TEMPO_ON_VERDE);

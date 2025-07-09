@@ -50,7 +50,7 @@ void loop()
   }
 
   i = 0;
-  while(i < 5)
+  while(i < 3)
   {
     digitalWrite(LED_AMARELO, HIGH);
     delay(TEMPO_ON_AMARELO);
@@ -60,7 +60,7 @@ void loop()
   }
 
   i = 0;
-  while(i < 5)
+  while(i < 10)
   {
     digitalWrite(LED_VERDE, HIGH);
     delay(TEMPO_ON_VERDE);

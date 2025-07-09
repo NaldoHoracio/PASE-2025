@@ -57,7 +57,7 @@ void loop()
     digitalWrite(LED_AMARELO, LOW);
     delay(1000);
     i++;
-  }while(i < 5);
+  }while(i < 3);
 
   i = 0;
   do{
@@ -66,5 +66,5 @@ void loop()
     digitalWrite(LED_VERDE, LOW);
     delay(1000);
     i++;
-  }while(i < 5);
+  }while(i < 10);
 }
