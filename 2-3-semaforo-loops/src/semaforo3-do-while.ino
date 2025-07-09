@@ -39,27 +39,32 @@ void setup()
  */
 void loop()
 {
-  for(i = 0; i < 5; ++i)
-  {
+  int i = 0;
+
+  do{
     digitalWrite(LED_VERMELHO, HIGH);
     delay(TEMPO_ON_VERMELHO);
     digitalWrite(LED_VERMELHO, LOW);
     delay(1000);
-  }
+    i++;
+  }while(i < 5);
+  
+  i = 0;
 
-  for(i = 0; i < 5; ++i)
-  {
+  do{
     digitalWrite(LED_AMARELO, HIGH);
     delay(TEMPO_ON_AMARELO);
     digitalWrite(LED_AMARELO, LOW);
     delay(1000);
-  }
+    i++;
+  }while(i < 5);
 
-  for(i = 0; i < 5; ++i)
-  {
+  i = 0;
+  do{
     digitalWrite(LED_VERDE, HIGH);
     delay(TEMPO_ON_VERDE);
     digitalWrite(LED_VERDE, LOW);
     delay(1000);
-  }
+    i++;
+  }while(i < 5);
 }

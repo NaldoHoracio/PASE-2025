@@ -1,56 +1,37 @@
 /*
  * Author: Edvonaldo Horácio (edvonaldo.santos@ifal.edu.br)
  * Data: 25/06/2025
- * Descrição: Este programa é a implementação de um semáforo
+ * Descrição: Este programa é a implementação de um semaforo1
  * usando Arduino UNO
 */
 
-#define TEMPO_ON_VERMELHO 4000
-#define TEMPO_ON_AMARELO 3000
-#define TEMPO_ON_VERDE 5000
-
-#define LED_VERMLEHO 8// Definindo LED_VERMELHO como 8
-#define LED_AMARELO 9// Definindo LED_AMARELO como 9
-#define LED_VERDE 10// Definindo LED_VERDE como 10
-
 /**!
  * @apresentacao Função setup
- *
- *
- * @parametro 
- * @retval
  */
 void setup()
 {
-  pinMode(LED_VERMLEHO, OUTPUT);// Led vermelho
-  pinMode(LED_AMARELO, OUTPUT);// Led amarelo
-  pinMode(LED_VERDE, OUTPUT);// Led verde  
+  pinMode(8, OUTPUT);// Led vermelho
+  pinMode(9, OUTPUT);// Led amarelo
+  pinMode(10, OUTPUT);// Led verde  
 }
 
 
 /**!
  * @apresentacao Função loop
- *
- * Esta função executa as instruções que o 
+ * Esta função insere as instruções que o 
  * arduino irá executar. Equivale a main do C++
- *
- * @parametro 
- * @retval
  */
 void loop()
 {
-  //Serial.println("LED VERMELHO");
-  digitalWrite(LED_VERMLEHO, HIGH);
-  delay(TEMPO_ON_VERMELHO); // Wait for 1000 millisecond(s)
-  digitalWrite(LED_VERMLEHO, LOW);
+  digitalWrite(8, HIGH);// Liga LED vermelho
+  delay(4000);
+  digitalWrite(8, LOW);// Desliga LED vermelho
   
-  //Serial.println("LED VERDE");
-  digitalWrite(LED_VERDE, HIGH);
-  delay(TEMPO_ON_VERDE); // Wait for 1000 millisecond(s)
-  digitalWrite(LED_VERDE, LOW);
-  
-  //Serial.println("LED AMARELO");
-  digitalWrite(LED_AMARELO, HIGH);
-  delay(TEMPO_ON_AMARELO); // Wait for 1000 millisecond(s)
-  digitalWrite(LED_AMARELO, LOW);
+  digitalWrite(10, HIGH);// Liga LED verde
+  delay(5000);
+  digitalWrite(10, LOW);// Desliga LED verde
+
+  digitalWrite(9, HIGH);// Liga LED amarelo
+  delay(3000);
+  digitalWrite(9, LOW);// Desliga LED amarelo
 }

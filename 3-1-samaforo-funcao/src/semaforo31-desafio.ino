@@ -6,8 +6,12 @@
 */
 
 #define TEMPO_ON_VERMELHO 1500
+#define TEMPO_OFF_VERMELHO 1000
 #define TEMPO_ON_AMARELO 1500
+#define TEMPO_OFF_AMARELO 1000
 #define TEMPO_ON_VERDE 1500
+#define TEMPO_OFF_VERDE 1000
+
 
 #define LED_VERMELHO 8// Definindo LED_VERMELHO como 8
 #define LED_AMARELO 9// Definindo LED_AMARELO como 9
@@ -44,7 +48,7 @@ void loop()
     digitalWrite(LED_VERMELHO, HIGH);
     delay(TEMPO_ON_VERMELHO);
     digitalWrite(LED_VERMELHO, LOW);
-    delay(1000);
+    delay(TEMPO_OFF_VERMELHO);
   }
 
   for(i = 0; i < 3; ++i)
@@ -52,7 +56,7 @@ void loop()
     digitalWrite(LED_AMARELO, HIGH);
     delay(TEMPO_ON_AMARELO);
     digitalWrite(LED_AMARELO, LOW);
-    delay(1000);
+    delay(TEMPO_OFF_AMARELO);
   }
 
   for(i = 0; i < 10; ++i)
@@ -60,6 +64,6 @@ void loop()
     digitalWrite(LED_VERDE, HIGH);
     delay(TEMPO_ON_VERDE);
     digitalWrite(LED_VERDE, LOW);
-    delay(1000);
+    delay(TEMPO_OFF_VERDE);
   }
 }

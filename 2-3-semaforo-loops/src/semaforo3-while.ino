@@ -27,7 +27,6 @@ void setup()
   pinMode(LED_VERDE, OUTPUT);// Led verde  
 }
 
-
 /**!
  * @apresentacao Função loop
  *
@@ -39,26 +38,34 @@ void setup()
  */
 void loop()
 {
-  int i = 0, j = 0, k = 0;
+  int i = 0;
 
-  do{
+  while(i < 5)
+  {
     digitalWrite(LED_VERMELHO, HIGH);
     delay(TEMPO_ON_VERMELHO);
     digitalWrite(LED_VERMELHO, LOW);
     delay(1000);
-  }while(i < 5);
+    i++;
+  }
 
-  do{
+  i = 0;
+  while(i < 5)
+  {
     digitalWrite(LED_AMARELO, HIGH);
     delay(TEMPO_ON_AMARELO);
     digitalWrite(LED_AMARELO, LOW);
     delay(1000);
-  }while(i < 5);
+    i++;
+  }
 
-  do{
+  i = 0;
+  while(i < 5)
+  {
     digitalWrite(LED_VERDE, HIGH);
     delay(TEMPO_ON_VERDE);
     digitalWrite(LED_VERDE, LOW);
     delay(1000);
-  }while(i < 5);
+    i++;
+  }
 }
